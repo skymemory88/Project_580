@@ -1,0 +1,708 @@
+\documentclass[11pt]{article}
+\usepackage[cm]{fullpage}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage[letterpaper ,left=2cm,top=2.25cm,bottom=2.25cm,right=2.5cm,nohead,nofoot]{geometry}
+\usepackage{color}
+\definecolor{LinkColor}{rgb}{0.0,0.0,0.804}
+\definecolor{MenuColor}{rgb}{0.0,0.0,0.804}
+\usepackage[colorlinks,breaklinks,urlcolor=LinkColor]{hyperref}
+\newcommand{\menuItem}[1]{{\color{MenuColor}\textsf{#1}}}
+\usepackage{bm}
+\usepackage{bbold}
+\newcommand{\bqs}{\begin{eqnarray*}}
+\newcommand{\eqs}{\end{eqnarray*}}
+\newcommand{\bq}{\begin{eqnarray}}
+\newcommand{\eq}{\end{eqnarray}}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\pd}{\partial}
+\newcommand{\ingr}{\includegraphics}
+\newcommand{\ct}{\centering}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\DeclareMathOperator{\sgn}{sgn}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[scaled]{beramono}
+\usepackage{wrapfig}
+\begin{document}
+
+\title{Magnetic response of type-II superconductor}
+\author{Yikai Yang}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+This project is intended to simulate magnetic response of a two dimensional extreme type-II superconductor to a uniform magnetic oriented perpendicular to the plane that the superconductor lies.\\
+\\
+\subsection{Type-II superconductor}
+Type-II superconductors is unique in the way that it has a mixed state in which both normal state and superconducting state can appear simultaneously at the same specimen. It is a second order phase transition, and occurs when an external magnetic field is applied to the superconductor, when the strength of magnetic field is in a certain range (the upper and lower limits of such a range is determined by the material itself, and are called upper critical field $H_{C2}$ and lower critical field $H_{C1}$), the magnetic flux can penetrates into the superconductor, effectively turn the part where it goes through to normal state, enclosed by supercurrent of superconducting electrons, and it is called vortex. One particular character of such vortices is that the flux through each of them is quantized (called fluxoid), the angular momentum each of them "carry" is thus also quantized.
+
+
+\subsection{Ginzburg-Landau theory}
+ The complete Ginzburg-Landau (GL) theory started from 1937 and was further developed by Landau's student Ginzburg in 1950 for use in superconductivity \cite{GLa}. Later when BCS theory came out \cite{BCS}, which was the first microscopic theory, another Landau's student: Gor'kov rigorously derived GL theory from BCS theory, showed that the former is a limiting case of the later\cite{Gorkov}.\\
+\\
+
+The original theory of second order phase transition promoted by Landau was based on three fundamental assumptions\cite{GL}:\\
+\bn\item The system can be described by a complex scalar order parameter, that goes to zero at transition point.
+\item The Free energy of a system undergoes second order phase transition changes continuously, thus the difference between the free energy of the system before and after the transition near transition point is infinitesimally small\cite{free}, and can be expanded into power series.
+\item The expansion coefficients of such an expansion is a function of temperature.\\
+\en
+
+
+Consider a system undergoes a second order phase transition, we can express the system's free energy density as:\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\centering
+\ingr[width=0.5\textwidth]{free}
+\caption{Typical free energy diagram of a system undergoes a second order phase transition, as temperature goes across and below the transition temperature (parameter $\alpha$ changes sign from positive to negative), the corresponding free energy curve changes smoothly, shifting the energy minima\cite{free}.}
+\label{free}
+\end{wrapfigure}
+
+
+$$
+f=f_n+\Delta f
+$$
+Where $f$ and $f_n$ denote free energy density after transition and that before transition (normal state). At transition temperature, $\Delta f$ is exceedingly small, thus we can expand it into series:\\
+$$
+f=f_n+\alpha(T)|\psi|^2+\frac{\beta(T)}{2}|\psi|^4+...
+$$
+In the equation above, both $\alpha(T)$ and $\beta(T)$ are expansion coefficients that are functions of temperature, and $\psi$ is the order parameter, which, as we mentioned before, is just the macroscopic wave function of condensates. Here we abandoned higher order terms as they contribute little to the overall free energy, and only kept terms to the power of an even number because of symmetry consideration.\\
+\\
+Now we add the kinetic energy term:\\
+$$
+f=f_n+\frac{\hbar^2}{2m^*}|\nabla\psi|^2+\alpha(T)|\psi|^2+\frac{\beta(T)}{2}|\psi|^4+...
+$$
+Where $m*$ is effective mass of cooper pairs of electrons.\\
+\\
+Mathematically, it is always conveniently change the temperature dependence of expansion coefficients solely onto $\alpha(T)$, making $\beta(T)=constant$.
+Noting that the free energy is a function of wave function, the minimization of free energy using variation principle is then conducted with respect to the wave function:\\
+$$
+\frac{\pd f}{\pd \psi(r)}=0
+\hspace{2cm}
+\frac{\pd f}{\pd \psi^*(r)}=0
+$$
+If the system is immersed in a magnetic field, we will have to do the following transformation:\\
+$$
+-i\hbar\nabla\rightarrow-i\hbar\nabla-q\vec{A}
+$$
+where $q$ is effective charge, and $\vec{A}$ is the vector potential. For superconductors, $q=-2e$, and $\vec{A}$, of course, depends on the applied field and gauge choice.
+then the free energy density would appear as:\\
+$$
+f=f_n+\alpha|\Psi|^2+\frac{\beta}{2}|\Psi|^4+\frac{1}{2m^*}\bigg|(-i\hbar\nabla-\frac{e^*}{c}\vec{A})\Psi\bigg|^2+\frac{h^2}{8\pi}
+$$
+Through algebra manipulation, this eventually leads us to a nonlinear Schr\"{o}dinger equation:\\
+$$
+\alpha\Psi+\beta\Psi|\Psi|^2+\frac{1}{2m^*}\left(i\hbar\nabla+\frac{e^*}{c}\vec{A}\right)^2\Psi=0
+$$
+and its boundary condition:\\
+$$
+\left(i\hbar\nabla\Psi+\frac{e^*}{c}\vec{A}\Psi\right)\cdot\vec{n}=0
+$$
+and this is the first Ginzburg-Landau (GL) equations for a superconductor in magnetic field. Sometimes in a large system where variables vary slowly and smoothly, people also use linear Ginzburg-Landau equation to numerically solve problems, in which we simply drop the triple power term from the above equation.\\
+In the first GL equation, the expansion coefficients are given as:\\
+$$
+\alpha\approx1-\frac{T_c}{T}
+$$
+$$
+\beta\approx const
+$$
+\\
+The second one comes from the fact that there is now an additional external parameter: magnetic field ($\vec{B}$) now, which in equivalent determined by $\vec{a}$, therefore, we perform variation principle again with respect to vector potential:\\
+$$
+\frac{\pd f}{\pd \vec{A}}=0
+$$
+This will lead us to the second Ginzburg-Landau equation through algebra manipulation, during which we use identity: $\vec{a}\cdot\nabla\times\vec{b}=\vec{b}\cdot\nabla\vec{a}-\nabla(\vec{a}\cdot\vec{b})\cite{Schmidt}$\\
+\\
+\bqs
+\vec{j_s}&=&\frac{c}{4\pi}\nabla\times\nabla\times\vec{A}=-\frac{i\hbar e^*}{2m^*}(\Psi^*\nabla\Psi-\Psi\nabla\Psi^*)-\frac{e^*}{m^*c}|\Psi|^2\vec{A}\\
+&\Ra& \nabla(\nabla\cdot\vec{A})-\nabla^2\vec{A}=-\frac{i\hbar e^*}{2m^*}(\Psi^*\nabla\Psi-\Psi\nabla\Psi^*)-\frac{e^*}{m^*c}|\Psi|^2\vec{A}\\
+\eqs
+This is the second Ginzburg-Landau equation, since the only unknown variables are $\Psi$ and $\vec{A}$, these two coupled equations should be adequate to solve for them in any system that can be described by this theory.\\
+
+\subsection{Abrikosov Lattice}
+\section{Model}
+
+\subsection{Boundary Condition}
+In order to simplify the procedure of finding solutions in a finite area, I initially applied periodic boundary condition (to mimic a infinitely large sample) so that I can ignore the complication caused by the real boundary condition.\\
+\\
+The boundary condition is applied in such a way that it comes in both in the initial condition and during updating. In initial condition, each cell only feels the influence of a vortex that is half the side size distant from it, the influence of any vortex further than that from the cell will be counted by wrapping around the edge from the other side but not the direct distance (see figure \ref{periodic}).\\
+Later on, I will add in a hard boundary during updating using a dummy margin to force wave function (order parameter) to vanish (see figure \ref{margin}). Then I will compare results under these two boundary conditions.\\
+In updating process, the periodic boundary condition is implemented by wrapping data of a cell around the sample when it exceeds the length of the sample. Which means, during updating, when the calculation needs to read or write a value beyond the boundary, instead of discarding that data, it is read from or wrote back to the other side of the boundary.\\
+
+\begin{figure}[h!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{\textwidth}
+\ingr[width=\textwidth]{periodic}
+\caption{A scheme of how periodic boundary condition implemented.}
+\label{periodic}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{\textwidth}
+\ingr[width=\textwidth]{hard}
+\caption{A scheme of how hard boundary condition implemented.}
+\label{margin}
+\end{subfigure}
+\end{minipage}
+\end{figure}
+
+\subsection{Evaluation of equations}
+In order to further simplify the problem under inspection, I chose natural unit system ($k_B=\hbar=e=m_e=1$, $c=\frac{1}{\alpha}=\frac{1}{137}$, where $\alpha$ is fine structure constant). Thus the two GL equations became:\\
+$$
+(i\nabla+274\vec{A})^2\Psi+4\alpha+4\beta|\Psi|^2\Psi=0
+$$
+Define a new variable $\xi^2=\frac{\hbar^2}{4*m_e|\alpha|}$, and make $\beta=1$. Use a normalized wave function given by:\\
+\\
+$$
+f=\frac{\Psi(r)}{\Psi_0}
+$$
+where $\Psi_0^2=\frac{|\alpha|}{\beta}=|\alpha|$, and thus $f$ ranges from 0 to 1 throughout the system. Eventually:\\
+\bqs
+&&\xi^2(i\nabla+274\vec{A})^2f-f+|f|^2f=0\\
+\\
+&&\nabla\times\nabla\times\vec{A}=-i274|\alpha|\pi(f^*\nabla f-f\nabla f^*)-8\cdot137^2\cdot \pi|\alpha||f|^2\vec{A}\\
+\eqs
+Since essentially the wave function is a complex number on each cell, and vector potential is, of course, a two dimensional vector on each cell. Thus if we use the first GL equation solve for wave function, then in the end we could break down the second GL equation into its two component along x-axis and y-axis to solve for values individually.\\
+For super current density, we use the conventional quantum mechanical definition:\\
+$$
+\vec{j}=-i\frac{e^*\hbar}{2m^*}[\psi^*\nabla\psi-\psi\nabla\psi^*]-\frac{(e^*)^2}{m^*c}|\psi|^2\vec{A}
+$$
+This will eventually give:\\
+$$
+\vec{j}=-\frac{i}{2}[f^*\nabla f-f\nabla f^*]-\frac{2}{c}|f|^2\vec{A}
+$$
+
+
+
+\section{\label{SECT:NumericalMethod} Numerical Method}
+
+All the differentiations are expressed using finite difference approximation in symmetric form, that is to say:\\
+\bqs
+\frac{\pd f}{\pd x}&=&\frac{f(x+\Delta x)-f(x-\Delta x)}{2\cdot \Delta x}\\
+\\
+\nabla f(x,y) &=& \frac{\pd f(x,y)}{\pd x}\hat{x}+\frac{\pd f(x,y)}{\pd y}\hat{y}\\
+&=&\frac{f(x+\Delta x,y)-f(x-\Delta x,y)}{2\cdot \Delta x}\hat{x}+\frac{f(x,y+\Delta y)-f(x,y-\Delta y)}{2\cdot \Delta y}\hat{y}\\
+\\
+\nabla^2f(x,y)&=&\frac{\pd^2 f}{\pd x^2}+\frac{\pd^2 f}{\pd y^2}\\
+&=&\frac{f(x+\Delta x,y)-2f(x,y)+f(x-\Delta x.y)}{(\Delta x)^2}+\frac{f(x,y+\Delta y)-2f(x,y)+f(x,y-\Delta y)}{(\Delta y)^2}\\
+\eqs
+\\
+The process of solving the problem mainly relies on relaxation methods, in which I will provide a reasonable initial guess as the starting point, and the system would evolve under the guidance of the differential equations provided.\\
+\\
+Since for each cell, we are interested in the local vector potential and local wave function, thus it is equivalent of investigating two discrete fields, one complex field corresponds to wave function distribution, and one vector field corresponds to vector potential distribution. In this simulation, I created a class called "field" (see "field.h"), use which I created the above two "fields", stored and updated for solutions.\\
+
+
+\section{Implementation}
+
+\subsection{Code Structure}
+The code used to implement the numerical simulation for the problem under inspection can be broken down to four blocks:\\
+\bn
+\item Initialization. Prepare a discretized space, assign initial values to each cell. Then output a report of the initial condition
+\item Linear update (relaxation process). Using linearized Ginzburg-Landau equation to update each cell in a particular order with a selected damping factor.
+\item Non-linear update (relaxation process), Repeat the last step on an identical copy of the initial condition using non-linear GL equations.
+\item Report data. Generate a final report of values of each cell after relaxation.
+\en
+
+\subsection{Discretizing}
+The shape of the sample is chosen to be square, discretized in cartesian coordinate along x-axis (horizontal) and y-axis (vertical) with the same length for increments in both directions ($dx=dy$). Due to the variation of values of variables within a distance of coherent length($\xi$), the unit cell is selected to be much smaller than the coherent length, it can be changed in the program as $\xi=n\cdot dx$, where n can be optimized by trial and error.
+
+
+\subsection{Initial Condition}
+The system was set up initially with one (or more) vortex in the centre of the sample (corresponding to a giant vortex state) if it is open boundary condition. If the system is in periodic condition, the vortices can be put randomly inside the sample. Since the coherent length ($\xi$) is determined by discretization step, thus in contrast to reality, where the temperature distance from the transition temperature ($T_c-T$) determines expansion coefficient ($\alpha\approx 1-\frac{T_c}{T}$), and thus forth the coherent length ($\xi^2=\frac{\hbar^2}{4*m_e|\alpha|}$), the program actually use information of discretization to determine coherent length, and then use coherent length to determine expansion coefficient ($\alpha=-\frac{\hbar^2}{4\cdot \xi^2m_e}=\frac{1}{4\xi^2}$). By this way, an implicit repletion between temperature and the discretizing step is established, and can be used to extract information about temperature after a simulation:\\
+$$
+n=\frac{1}{2\cdot dx}\sqrt{\frac{T}{T-T_C}}
+$$
+Where $dx$ is discretizing step, and $n$ is how much bigger the coherent length is with respect to discretizing step ($\xi=n\cdot dx$); $T$ is the sample temperature, and $T_C$ is transition temperature.
+\\
+
+
+\begin{figure}[h!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{\textwidth}
+\ingr[width=\textwidth]{wavefunc_init}
+\caption{Initial condition for amplitude of wavefunction.}
+\label{initf}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{\textwidth}
+\ingr[width=\textwidth]{phase_init}
+\caption{and that for the phase of wavefunction.}
+\label{initp}
+\end{subfigure}
+\end{minipage}
+\label{initial_condition}
+\end{figure}
+
+
+Essentially, the initial value of wave function and vector potential is calculated by summing over influences of all the vortices with a range cut off. In another word, the initial guess of solution to GL equations are provided locally on each cell, and the local values are determined by the distance between the cell and each vortex with a range cut off (see the code for details), mathematically, the amplitude of the wave function follows\cite{Tinkham} (see figure \ref{initf}.
+
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\centering
+\ingr[width=0.48\textwidth]{vector}
+\caption{A scheme of how initial local vector potential built.}
+\label{vector}
+\end{wrapfigure}
+
+
+$$
+|\psi(r)|=tanh(\frac{\vec{r}-\vec{r_{vortex}}}{\xi})
+$$
+\\
+As for the phase of the wave function, it is determined by the relative angle between x-axis and the vector connecting the cell and a vortex, as well as the overall number of vortices in the sample\cite{phase}:\\
+\\
+$$
+\theta(r)=arctan(\frac{y}{x})\cdot N_{vortice}
+$$
+\\
+where $r^2=x^2+y^2$. A density plot of initial phase of local wave functions are generated and showed in figure \ref{initp}. 
+\\
+
+
+
+By the same way, the initial value of vector potential is locally decided with only one addition that the direction (since its a vector) of the vector potential is determined by sum over the vector potential determined by the relative coordinate of each vortex with respect to the cell. A scheme is shown as figure \ref{vector}. Such a construction of vector potential has the advantage of that it behaves well inside a vortex, wouldn't blow up, and also such a vector potential has the symmetry of a vortex (full rotation symmetry). \\
+\\
+The gauge used here for this vector potential is mathematically shown as\cite{Tinkham}:\\
+$$
+\vec{A}=A(r)\hat{\Theta}
+$$
+where $A(r)=\frac{r}{274(\xi^2+r^2)}$, thus making $A(r)=\frac{B(0)r}{2}$ when close to the vortex, and $A(\infty)=\frac{\Phi_0}{2\pi r}$ when a cell is far from the vortex\cite{Tinkham}.\\
+
+
+\subsection{Relaxation rule}
+
+Finally, with all the approximation and transformation, we arrive at three coupled partial differential equations written in numerical language as follow:\\
+First GL equation:\\
+\bqs
+&&\xi^2[\frac{f_{i+1}^j+f_{i-1}^j}{(dx)^2}+\frac{f_{i}^{j+1}+f_{i}^{j-1}}{(dy)^2}+\frac{-2f_i^j}{(dx)^2}+\frac{-2f_i^j}{(dy)^2}+274^2|\vec{A}|^2f_i^j\\
+\\
+&&+i274[f_i^j(\frac{AX^j_{i+1}-AX^j_{i-1}}{2\cdot dx}+\frac{AY^j_{i+1}-AY^j_{i-1}}{2\cdot dy})\\
+&&+(AX\hat{x}+AY\hat{y})(\frac{f^j_{i+1}-f^j_{i-1}}{2\cdot dx}\hat{x}+\frac{f^{j+1}_{i}-f^{j-1}_{i}}{2\cdot dy}\hat{y})]]-f^j_i+|f^j_i|^2f^j_i=0\\
+\eqs
+Where the subscripts and superscripts "i" and "j" denotes "x" and "y" direction respectively, "AX" and "AY" denotes x-component and y-component of the vector potential, "dx" and "dy" are the "infinitesimal" change along x-axis and y-axis.\\
+\\
+Define new variables:\\
+\bqs
+messR0&=&\xi^2[\frac{f_{i+1}^j+f_{i-1}^j}{(dx)^2}+\frac{f_{i}^{j+1}+f_{i}^{j-1}}{(dy)^2}+i274(AX_i^j\frac{f^j_{i+1}-f^j_{i-1}}{2\cdot dx}+AY_i^j\frac{f^{j+1}_{i}-f^{j-1}_{i}}{2\cdot dy})]\\
+\\
+messL0&=&\xi^2[\frac{2}{(dx)^2}+\frac{2}{(dy)^2}-274^2|\vec{A}|^2-i274(\frac{AX^j_{i+1}-AX^j_{i-1}}{2\cdot dx}+\frac{AY^j_{i+1}-AY^j_{i-1}}{2\cdot dy})]+1-|f^{j}_i|^2\\
+\eqs
+This will give us the update rule:\\
+$$
+f^j_i=\frac{messR0}{messL0}
+$$
+For linear GL equation, we simply take out $|f^j_i|^2$ term from $"messL0"$.\\
+\\
+Now the second GL equation:\\
+\\
+\bqs
+&&\frac{AY^{j+1}_{i+1}-AY^{j-1}_{i+1}-AY^{j+1}_{i-1}+AY^{j-1}_{i-1}}{2\cdot dx\cdot2\cdot dy}-\frac{AX^{j+1}_i-2AX^j_i+AX^{j-1}_i}{(dy)^2}\\
+&=&-i274|\alpha|\pi(f_i^{j*}\frac{f^{j}_{i+1}-f^{j}_{i-1}}{2\cdot dx}-f^j_i\frac{f^{j*}_{i+1}-f^{j*}_{i-1}}{2\cdot dx})-8\times137^2\pi|\alpha||f_i^j|^2AX_i^j\\
+\\
+\\
+&&\frac{AX^{j+1}_{i+1}-AX^{j-1}_{i+1}-AX^{j+1}_{i-1}+AX^{j-1}_{i-1}}{2\cdot dx\cdot2\cdot dy}-\frac{AY^{j}_{i+1}-2AY^j_i+AY^{j}_{i-1}}{(dx)^2}\\
+&=&-i274|\alpha|\pi(f_i^{j*}\frac{f^{j+1}_{i}-f^{j-1}_{i}}{2\cdot dy}-f^j_i\frac{f^{j+1*}_{i}-f^{j-1*}_{i}}{2\cdot dy})-8\times137^2\pi|\alpha||f_i^j|^2AY_i^j\\
+\eqs
+Do the same arrangement, and we have:\\
+\bqs
+messRx&=&-\frac{AY^{j+1}_{i+1}-AY^{j-1}_{i+1}-AY^{j+1}_{i-1}+AY^{j-1}_{i-1}}{2\cdot dx\cdot2\cdot dy}-i274|\alpha|\pi(f_i^{j*}\frac{f^{j}_{i+1}-f^{j}_{i-1}}{2\cdot dx}-f^j_i\frac{f^{j*}_{i+1}-f^{j*}_{i-1}}{2\cdot dx})\\
+&&+\frac{AX^{j+1}_i+AX^{j-1}_i}{(dy)^2}\\
+\\
+messLx&=&8\times137^2\pi|\alpha||f_i^j|^2+\frac{2}{(dy)^2}\\
+\\
+\Ra AX^j_i&=&\frac{messRx}{messLx}\\
+\eqs
+The same for the other direction:\\
+\bqs
+messRy&=&-\frac{AX^{j+1}_{i+1}-AX^{j-1}_{i+1}-AX^{j+1}_{i-1}+AX^{j-1}_{i-1}}{2\cdot dx\cdot2\cdot dy}-i274|\alpha|\pi(f_i^{j*}\frac{f^{j+1}_{i}-f^{j-1}_{i}}{2\cdot dy}-f^j_i\frac{f^{j+1*}_{i}-f^{j-1*}_{i}}{2\cdot dy})\\
+&&+\frac{AY^{j}_{i+1}+AY^{j}_{i-1}}{(dx)^2}\\
+\\
+messRy&=&8\times137^2\pi|\alpha||f_i^j|^2+\frac{2}{(dx)^2}
+\\
+\Ra AY_i^j&=&\frac{messRy}{messLy}\\
+\\
+\vec{A}&=&AX\hat{x}+AY\hat{y}=(AX,AY)\\
+\eqs
+In order not to converge overly fast to a nonsensical solution, when actually implementing the program, I used a damping factor to slow down the convergence:\\
+$$
+f_{new}=(1-\kappa_{damp})\cdot f_{old} + \kappa_{damp}G(x,y,f_{old},\vec{A}_{old})
+$$
+$$
+\vec{A}_{new}=(1-\kappa_{damp})\cdot \vec{A}_{old} + \kappa_{damp}G(x,y,f_{old},\vec{A}_{old})
+$$
+Where $\kappa$ is the damping factor and $G(x,y,f_{old},\vec{A}_{old}$ is just the updating rule. Depending on in what range the value of damping factor $\kappa$ falls, the updating rules are called Jacobi ($\kappa=1$), Underrelaxation ($<0\kappa<1$), or Overrelaxation($-1<\kappa<0$).\\
+\\
+
+
+
+\subsection{Updating Rules}
+
+As introduced in class, there are several available updating rules (Jacobi, Chess board, Gauss-Seidel), I mainly employed and compared two updating orders: Chess board (see figure \ref{chess}), and an order that fits the geometry of this particular case (see figure \ref{mine}).
+
+
+\begin{figure}[h!]
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{chess_board}
+\caption{Chess board updating, each time only updates cells indicated by the same colour.}
+\label{chess}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{mine}
+\caption{The updating order fits the current problem the best, an extended version of chess board updating. Updating order is indicated by the colours, each time only update cells in one colour. This methods only works for grids with an even number of cells on each side}
+\label{mine}
+\end{subfigure}
+\end{minipage}
+\label{updating_rules}
+\end{center}
+\end{figure}
+
+
+The reason for the updating rules in figure \ref{mine} roots from the fact that, in order to, update a cell, it requires for knowledge of all of its eight neighbours (see relaxation rules for vector potential), thus this way of updating balances the weight of new data of neighbours and old ones the best.\\
+
+\section{Benchmark Calculations}
+Because the main results produced in time are all graphic, thus the only comparison can be made is the pattern of Abrikosov lattice (see figure \ref{Ab_lattice}), here we cite from \cite{Ab_lattices}:\\
+
+
+Due to the time limitation and huge scale of simulation, I couldn't produce a Abrikosov lattice plot yet, in figure \ref{lattice} is a plot of six randomly placed vortices in an infinitely large (periodic boundary condition) sample rearranging themselves to a stable state. The simulation takes very long time due to the scaling, thus by the deadline, I couldn't produce anything near actually Abrikosov lattice, but should I get one, I will definitely update it.\\
+
+
+\begin{figure}[h!]
+\minipage{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{Ab_lattice}
+\caption{Density plot of wavefunction (order parameter) in a Abrikosov lattice.}\cite{Ab_lattices}
+\label{Ab_lattice}
+\end{subfigure}
+\endminipage
+\minipage{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{500_6V_random_06damp_periodic}
+\caption{Density plot generated in my numerical simulation (halfway to the final state).}
+\label{lattice}
+\end{subfigure}
+\endminipage
+\caption{}
+\label{Lattices}
+\end{figure}
+
+
+\section{Results \& Discussion}
+\subsection{Robust Check}
+
+
+First check is robust check, creating an initial condition of no vortex under both boundary conditions (open hard and periodic), let the system evolve for sometime (800 times), and check the results, the graphic results are presented as in figure \ref{0v_p}, \ref{0v_pl}, \ref{0v_op}, \ref{0v_opl}.\\
+
+
+\begin{figure}[ht!]
+\minipage{0.45\textwidth}
+\ct
+\ingr[width=\linewidth]{800_0V_periodic}
+\caption{Density plot of wave function in the sample after 800 times evolution using non-linear GL equations under periodic boundary condition.}
+\label{0v_p}
+\endminipage\hfill
+\minipage{0.45\textwidth}
+\ingr[width=\linewidth]{800_0V_periodic_linear}
+\caption{Density plot of wave function in the sample after 800 times evolution using linear GL equations under periodic boundary condition.}
+\label{0v_pl}
+\endminipage\hfill
+
+\minipage{0.45\textwidth}
+\ingr[width=\linewidth]{800_0V_open}
+\caption{Density plot of wave function in the sample after 800 times evolution using non-linear GL equations under open boundary condition.}
+\label{0v_op}
+\endminipage\hfill
+\minipage{0.45\textwidth}
+\ingr[width=\linewidth]{800_linear_0V_open}
+\caption{Density plot of wave function in the sample after 800 times evolution using linear GL equations under open boundary condition.}
+\label{0v_opl}
+\endminipage\hfill
+
+\caption{figure \ref{0v_p} shows the graphic results after 800 evolutions of a superconducting square slab under periodic boundary condition in a uniform magnetic field below transition temperature with no vortex setup in initial condition.\ref{robust} shows the same thing as figure \ref{0v_p} except under open boundary condition, where the wave function is forced to vanish at the boundary.}
+\end{figure}
+
+From the comparison, it appears the results make good physical sense as, in periodic boundary condition, no matter how long the system evolves, the ground states is Meissner effect, which was the initial state, thus there is no difference between them in spite of that the result from linear GL equations differs a little as a result of approximation.\\
+For open boundary condition, where wavefunctions are forced to vanish when crossing boundaries, the system evolves into a state where far inside the sample, it exhibits Meissner effect while magnetic fields penetrates at edges, and order parameter (wavefunction) smoothly recovers from zero at edge to unity at the centre.\\
+
+\pagebreak
+\subsection{One vortex scenario}
+\subsubsection{Single vortex}
+Then I put in one vortex and let the system evolve (update) for 1000 times, shown in figure \ref{1V_op} and \ref{1V_p} are comparisons between open boundary condition and periodic boundary condition using both linear and non-linear GL equations.\\
+\\
+From results from periodic boundary condition, we can clearly see that the system tends to create an anti-vortex (see figure \ref{anti}) near by the vortex been initially put in, the direction of the supercurrent around the anti vortex at the edge is opposite to that of supercurrent around the vortex in the centre. I postulate that any perturbation to the vortex would necessarily lead them to combine to create Meissner effect, which is the global ground state.\\
+\\
+
+
+\begin{figure}[h!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_100dx_03damp_1V_open}
+\caption{The results under open boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with one vortex at the centre, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{1V_op}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_100dx_03damp_1V_periodic}
+\caption{The results under periodic boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with one vortex at the centre, damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{1V_p}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{one}
+\end{figure}
+
+
+
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\centering
+\ingr[width=0.5\linewidth]{SC_8000_100dx_03damp_1V_periodic}
+\caption{Supercurrent vector plot created from non-linear GL equation after 8000 evolution under periodic boundary condition.}
+\label{anti}
+\end{wrapfigure}
+
+
+
+
+From results from open boundary condition (see figure \ref{1V_op}), the vortex survives from evolution of the system, and the conditions for boundaries are the same as before that, the magnetic field penetrates at edges, making order parameter vanish and gradually recovers back to unity at deep area of the sample wherever is also far away from the vortex. The same thing happens for giant vortex as well (see figure \ref{giant}), where three anti-vortices were created under periodic boundary condition.\\
+
+
+\subsubsection{Giante Vortex}
+
+Then I put more vortices into the sample at the centre (corresponding to a giant vortex state that carries multiple vortices angular momentum and fluids). Shown in figure \ref{3V_op} and \ref{3V_p} are comparisons between periodic boundary conditions and open boundary conditions. The corresponding supercurrent vector plots are shown in figure \ref{SC_3V_op} and \ref{SC_3V_p}.\\
+\\
+As we can see in the figure, under periodic boundary condition, the number of anti-vortices created by the system equals to the number of vortices I put in manually initially.\\
+
+
+\begin{figure}[ht!]
+\begin{center}
+\minipage{0.47\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_100dx_03damp_3V_open}
+\caption{The supercurrent results under open boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with three vortices at the centre (corresponding to a giant vortex), damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{3V_op}
+\end{subfigure}
+\endminipage
+\minipage{0.45\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{8000_100dx_03damp_3V_periodic}
+\caption{The supercurrent results under periodic boundary condition, produced by non-linear GL equations after 8000 times relaxation from its initial condition with three vortices at the centre (corresponding to a giant vortex), damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{3V_p}
+\end{subfigure}
+\endminipage
+\caption{}
+\label{boundary}
+\end{center}
+\end{figure}
+
+\begin{figure}[hb!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{SC_1000_100dx_03damp_3V_open}
+\caption{The results under open boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with three vortex at the centre (giant vortex), damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{SC_3V_op}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{SC_8000_100dx_03damp_3V_periodic}
+\caption{The results under periodic boundary condition, produced by non-linear GL equations after 8000 times relaxation from its initial condition with three vortex at the centre (giant vortex), damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{SC_3V_p}
+\end{subfigure}
+\end{minipage}
+\end{figure}
+
+
+\pagebreak
+\subsection{Linear and non-linear Ginzburg-Landau equations}
+A comparison between results from linear GL equations and non-linear ones for both boundary conditions tells us that non-linear GL equations are actually very good approximation to the non-linear ones as the results (see figure \ref{lin} and \ref{nonl}), not just qualitatively agree with, but also quantitatively not far from each other with only small amplitude difference.\\
+
+
+\begin{figure}[h!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{8000_100dx_03damp_1V_periodic_linear}
+\caption{The results under open boundary condition, produced by linear GL equations after 8000 times relaxation from its initial condition with one vortex at the centre, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{lin}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{8000_100dx_03damp_1V_periodic}
+\caption{The results under periodic boundary condition, produced by non-linear GL equations after 8000 times relaxation from its initial condition with one vortex at the centre (corresponding to a giant vortex), damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{nonl}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{linear_or_non}
+\end{figure}
+
+\begin{figure}[hb!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_5dx_03damp_1V_open_linear}
+\caption{The results under open boundary condition, produced by linear GL equations after 1000 times relaxation from its initial condition with one vortex at the centre, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 5 times of the length of a cell.}
+\label{discr_1}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_5dx_03damp_1V_open}
+\caption{The results under periodic boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with one vortex at the centre (corresponding to a giant vortex), damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 5 times of the length of a cell.}
+\label{discr_2}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{discrepancy_1}
+\end{figure}
+
+
+Although from the comparison above it appears that both non-linear and linear GL equations behave very well and agree with each other, but under several "extreme" conditions, the discrepancy would show up. As seen in figure \ref{discr_1} and \ref{discr_2}, when the coherent length chosen to be only five times the length of a unit cell, the non-linear GL equation fails to produce sensible solution mainly due to the "old" information left from last update in the denominator of updating equation.\\
+
+
+\subsection{Multi-Vortex State}
+\subsubsection{Vortex-boundary interaction}
+
+
+In order to examine the behaviour of the system at presence of multiple vortices, I first put in two vortices near the centre (see figure \ref{2V_op_s} and \ref{2V_op_s_l}), separated from each other by about fifty times of the length of a unit cell, then let the system evolve under open boundary condition for 3000 loops, however, nothing obvious took place, thus I then placed three vortices under the same boundary condition but further separation (see figure \ref{3V_op_r_1000} and \ref{3V_op_r_4000}) and let the system evolve for 1000 and 4000 loops for comparison.\\
+
+\begin{figure}[ht!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{3000_100dx_03damp_2V_open}
+\caption{The results under open boundary condition, produced by non-linear GL equations after 3000 times relaxation from its initial condition with two vortices placed near the centre with a small separation, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{2V_op_s}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{SC_3000_100dx_2V_open}
+\caption{The vector plot of supercurrent result under open boundary condition, produced by non-linear GL equations after 3000 times relaxation from its initial condition with two vortices placed near the centre with a small separation, damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{2V_op_s_l}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{double}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{1000_100dx_03damp_3V_open_random}
+\caption{The results under open boundary condition, produced by non-linear GL equations after 1000 times relaxation from its initial condition with three vortices randomly placed in the sample, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{3V_op_r_1000}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{4000_100dx_03damp_3V_open_random}
+\caption{The results under periodic boundary condition, produced by non-linear GL equations after 4000 times relaxation from its initial condition with three vortices randomly placed in the sample, damping factor ($\kappa$) equals to 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{3V_op_r_4000}
+\end{subfigure}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[hb!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{SC_4000_100dx_03damp_3V_open_random}
+\caption{The supercurrent results under open boundary condition, produced by non-linear GL equations after 4000 times relaxation from its initial condition with three vortices randomly placed in the sample, damping factor ($\kappa$) equals 0.3, and coherent length chose to be 100 times of the length of a cell.}
+\label{3V_op_r_4000_SC}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{3V_03damp_random_init}
+\caption{The initial condition of three randomly generated vortices inside an infinite size (periodic boundary) square sample, emerging in a perpendicular and uniform magnetic field. The reason for periodic boundary condition in initial condition but update with open boundary condition is that when generating initial condition, solution has to be complete as part of the information may lost if other wise (as in open boundary condition, part of the information about those vortices near the edge will lost due to truncation).}
+\label{3V_op_r_4000_init}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{random}
+\end{figure}
+
+
+From the results, we can see that both vortices and anti-vortices(indicated by those small vortices, see figure \ref{3V_op_r_4000_SC}) near the edge tends to be expelled from the sample. In order to see how vortices interact among each other, I implemented the same simulation under periodic boundary condition (equivalent of infinite large sample). The results are presented in figure \ref{2V_p_diag_init}, \ref{2V_p_diag_800}, \ref{2V_p_diag_1500}, and \ref{2V_p_diag_1500_SC}.\\
+
+
+
+\subsubsection{Vortex-Vortex interaction}
+An obvious result from figure \ref{diag} is that when two vortices placed nearby each other in an infinitely large sample is that they will create two anti-vortices (see figure\ref{2V_p_diag_1500_SC}) along the direction but far apart, and vortex-antivortex "attraction" will pull the vortices apart, which in effect appears as a "repulsion" force between vortices (see figure \ref{2V_p_diag_init} and \ref{2V_p_diag_1500})
+
+
+\begin{figure}[ht!]
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{2V_init}
+\caption{The initial condition of a sample with two vortices placed diagonally symmetrical with respect to the centre under periodic boundary condition.}
+\label{2V_p_diag_init}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{2V_800_100dx_diagnal_06damp}
+\caption{The result from previous initial condition after 800 loops using non-linear GL equations under periodic boundary condition.}
+\label{2V_p_diag_800}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{2V_1500_100dx_diagnal_06damp}
+\caption{The result from previous initial condition after 1500 loops using non-linear GL equations under periodic boundary condition.}
+\label{2V_p_diag_1500}
+\end{subfigure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{subfigure}{0.9\linewidth}
+\ingr[width=\linewidth]{2V_1500_100dx_diagnal_06damp_SC}
+\caption{The supercurrent results from previous initial condition after 1500 loops using non-linear GL equations under periodic boundary condition.}
+\label{2V_p_diag_1500_SC}
+\end{subfigure}
+\end{minipage}
+\caption{}
+\label{diag}
+\end{figure}
+
+\subsection{Further improvement}
+Due to the limitation of time, there are many other features of the code hasn't been fully developed, but because of the fact that the code was built on fundamental (despite of phenomenological) laws of physics, it can be used to predict behaviours and produce numerical data of superconductors in magnetic field. Two of the main thing can be immediately improved is:\\
+\bn
+\item The way of updating in this code isn't fully time efficient, the sample (simulating space) can be broke down to four sub-spaces, and each updated individually using Gauss-Seidel rule, thus it would be ideal if one can use parallel computation to update these four sub-spaces together.
+\item Basically, most of physical model has to be in accordance with 3D world to be acceptable as a valid simulation, therefore the future improvement of the current code definitely involves treating the problem more realistically, especially dimensionally. 
+\en
+\par
+In conclusion, the current code has plenty room to be further improved, and can be used to produce data for most magnetic response of superconductors in general.\\ 
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{GLa}
+V. Ginzburg, L. Landau. \emph{On the theory of superconductivity}. Zh. eksper. Teoret. Fiz., {\bf 20}, 1064, (1950). Translation to English: Man of Physics: L.D. Landau, I.D. ter Haar, ed. Pergamon. Oxford, (1965),138-167.
+\bibitem{BCS}
+J. Bardeen, L.N.Cooper, J.R.Schrieffer. Phys. Rev. {\bf108}, 1175 (1957).
+\bibitem{Gorkov}
+L.P. Gor'kov. Soviet Physics JEPT {\bf36(9)}, 6 (1959).
+\bibitem{GL}
+K.-H. Hoffmann, Q.Tang. \emph{Ginzburg-Landau Phase Transition Theory and Superconductivity}. Birkh\"{a}user Verlag (2001).
+\bibitem{free}
+\emph{Landau theory of second order phase transitions}. Online material: http://lamp.tu-graz.ac.at/~hadley/ss2/landau/second\_order.php
+\bibitem{Schmidt}
+V.V. Schmidt. \emph{The physics of superconductors}. Springer (1997).
+\bibitem{Tinkham}
+Michael Tinkham. \emph{Introduction to Superconductivity, $2^{nd}$ Edition}. McGraw-Hill, Inc. (1996).
+\bibitem{phase}
+V.A. Schwerigert, F.M. Peeters, and P. Singha Deo. Phys. Rev. Lett. {\bf 81}, 13 (1998).
+\bibitem{Ab_lattices}
+M.M.Doria, J.E. Gubernatis, D. Rainer. Phys. Rev. B, {\bf41}, 10 (1990).
+\end{thebibliography}
+\end{document}

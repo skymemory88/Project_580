@@ -1,0 +1,1194 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.1.5)  5 JAN 2019 17:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ReportTemplate.tex
+(./ReportTemplate.tex
+LaTeX2e <2018-12-01>
+(c:/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(c:/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/texlive/2018/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(c:/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip46
+)
+(c:/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count103
+\l_MT_multwidth_dim=\dimen114
+\origjot=\skip50
+\l_MT_shortvdotswithinadjustabove_dim=\dimen115
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen116
+\l_MT_above_intertext_sep=\dimen117
+\l_MT_below_intertext_sep=\dimen118
+\l_MT_above_shortintertext_sep=\dimen119
+\l_MT_below_shortintertext_sep=\dimen120
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(c:/texlive/2018/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen123
+\WF@size=\dimen124
+\c@WF@wrappedlines=\count104
+\WF@box=\box29
+\WF@everypar=\toks20
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(c:/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen125
+\captionmargin@=\dimen126
+\captionwidth=\dimen127
+\caption@tempdima=\dimen128
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
+)
+\c@caption@flags=\count105
+\c@ContinuedFloat=\count106
+Package caption Info: wrapfig package is loaded.
+)
+\c@subfigure=\count107
+\c@subtable=\count108
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(c:/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
+\Gm@dimlist=\toks21
+)
+(c:/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(c:/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen140
+\Hy@linkcounter=\count112
+\Hy@pagecounter=\count113
+
+(c:/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count114
+
+(c:/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4393.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4393.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count115
+
+(c:/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen141
+\Fld@menulength=\count116
+\Field@Width=\dimen142
+\Fld@charsize=\dimen143
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring ON on input line 6398.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count117
+\c@Item=\count118
+\c@Hfootnote=\count119
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count120
+\c@bookmark@seq@number=\count121
+
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip51
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(c:/texlive/2018/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
+(c:/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(c:/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(c:/texlive/2018/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(c:/texlive/2018/texmf-dist/tex/latex/bera/beramono.sty
+Package: beramono 2004/01/31 (WaS)
+) (./ReportTemplate.aux)
+\openout1 = `ReportTemplate.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 32.
+(c:/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen144
+\scratchbox=\box30
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen145
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks23
+) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 486.25761pt, 71.13188pt)
+* v-part:(T,H,B)=(64.01869pt, 666.9326pt, 64.01869pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=486.25761pt
+* \textheight=666.9326pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-8.2513pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=0.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring ON on input line 32.
+(c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count128
+)
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
+
+(./ReportTemplate.out) (./ReportTemplate.out)
+\@outlinefile=\write3
+\openout3 = `ReportTemplate.out'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 39.
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+<free.png, id=109, 516.93124pt x 348.30125pt>
+File: free.png Graphic file (type png)
+<use free.png>
+Package pdftex.def Info: free.png  used on input line 62.
+(pdftex.def)             Requested size: 243.1288pt x 163.81853pt.
+[1
+
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1082) in paragraph at lines 70--72
+\T1/ptm/m/n/10.95 Where $\OML/cmm/m/it/10.95 f$ \T1/ptm/m/n/10.95 and $\OML/cmm
+/m/it/10.95 f[]$ \T1/ptm/m/n/10.95 de-note free en-ergy den-sity af-
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 70--72
+\T1/ptm/m/n/10.95 ter tran-si-tion and that be-fore tran-si-tion (nor-mal
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 70--72
+\T1/ptm/m/n/10.95 state). At tran-si-tion tem-per-a-ture, $\OT1/cmr/m/n/10.95 ^
+^A\OML/cmm/m/it/10.95 f$ \T1/ptm/m/n/10.95 is ex-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
+
+ []
+
+[2 <./free.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
+
+ []
+
+<periodic.png, id=144, 414.54875pt x 425.59pt>
+File: periodic.png Graphic file (type png)
+<use periodic.png>
+Package pdftex.def Info: periodic.png  used on input line 141.
+(pdftex.def)             Requested size: 243.1288pt x 249.6023pt.
+<hard.png, id=145, 543.02875pt x 287.0725pt>
+File: hard.png Graphic file (type png)
+<use hard.png>
+Package pdftex.def Info: hard.png  used on input line 148.
+(pdftex.def)             Requested size: 243.1288pt x 128.52875pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 139--153
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
+
+ []
+
+[4 <./periodic.png> <./hard.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
+
+ []
+
+<wavefunc_init.png, id=167, 642.4pt x 481.8pt>
+File: wavefunc_init.png Graphic file (type png)
+<use wavefunc_init.png>
+Package pdftex.def Info: wavefunc_init.png  used on input line 228.
+(pdftex.def)             Requested size: 243.1288pt x 182.34337pt.
+<phase_init.png, id=168, 642.4pt x 481.8pt>
+File: phase_init.png Graphic file (type png)
+<use phase_init.png>
+Package pdftex.def Info: phase_init.png  used on input line 235.
+(pdftex.def)             Requested size: 243.1288pt x 182.34337pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 226--241
+[]$[]$ $[]$
+ []
+
+<vector.png, id=171, 811.03pt x 427.5975pt>
+File: vector.png Graphic file (type png)
+<use vector.png>
+Package pdftex.def Info: vector.png  used on input line 249.
+(pdftex.def)             Requested size: 233.40157pt x 123.05403pt.
+
+Underfull \hbox (badness 1478) in paragraph at lines 257--261
+\T1/ptm/m/n/10.95 the vec-tor con-nect-ing the cell and a vor-tex, as
+ []
+
+
+Underfull \hbox (badness 3000) in paragraph at lines 257--261
+\T1/ptm/m/n/10.95 well as the over-all num-ber of vor-tices in the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--261
+
+ []
+
+[6 <./wavefunc_init.png> <./phase_init.png> <./vector.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 263--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 339--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--342
+
+ []
+
+<chess_board.png, id=197, 319.1925pt x 332.24126pt>
+File: chess_board.png Graphic file (type png)
+<use chess_board.png>
+Package pdftex.def Info: chess_board.png  used on input line 354.
+(pdftex.def)             Requested size: 175.04887pt x 182.20601pt.
+<mine.png, id=198, 725.71124pt x 515.9275pt>
+File: mine.png Graphic file (type png)
+<use mine.png>
+Package pdftex.def Info: mine.png  used on input line 361.
+(pdftex.def)             Requested size: 240.6972pt x 171.11469pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+[9 <./Chess_board.png> <./Mine.png>]
+<Ab_lattice.png, id=210, 706.64pt x 593.21625pt>
+File: Ab_lattice.png Graphic file (type png)
+<use Ab_lattice.png>
+Package pdftex.def Info: Ab_lattice.png  used on input line 383.
+(pdftex.def)             Requested size: 218.81442pt x 183.68694pt.
+<500_6V_random_06damp_periodic.png, id=212, 642.4pt x 481.8pt>
+File: 500_6V_random_06damp_periodic.png Graphic file (type png)
+<use 500_6V_random_06damp_periodic.png>
+Package pdftex.def Info: 500_6V_random_06damp_periodic.png  used on input line 
+390.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+<800_0V_periodic.png, id=217, 642.4pt x 481.8pt>
+File: 800_0V_periodic.png Graphic file (type png)
+<use 800_0V_periodic.png>
+Package pdftex.def Info: 800_0V_periodic.png  used on input line 410.
+(pdftex.def)             Requested size: 218.81444pt x 164.11124pt.
+<800_0V_periodic_linear.png, id=218, 642.4pt x 481.8pt>
+File: 800_0V_periodic_linear.png Graphic file (type png)
+<use 800_0V_periodic_linear.png>
+Package pdftex.def Info: 800_0V_periodic_linear.png  used on input line 415.
+(pdftex.def)             Requested size: 218.81444pt x 164.11124pt.
+<800_0V_open.png, id=219, 642.4pt x 481.8pt>
+File: 800_0V_open.png Graphic file (type png)
+<use 800_0V_open.png>
+Package pdftex.def Info: 800_0V_open.png  used on input line 421.
+(pdftex.def)             Requested size: 218.81444pt x 164.11124pt.
+<800_linear_0V_open.png, id=220, 642.4pt x 481.8pt>
+File: 800_linear_0V_open.png Graphic file (type png)
+<use 800_linear_0V_open.png>
+Package pdftex.def Info: 800_linear_0V_open.png  used on input line 426.
+(pdftex.def)             Requested size: 218.81444pt x 164.11124pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 431.
+
+LaTeX Warning: Reference `robust' on page 10 undefined on input line 431.
+
+
+LaTeX Warning: Reference `robust' on page 10 undefined on input line 431.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--436
+
+ []
+
+[10 <./Ab_lattice.png> <./500_6V_random_06damp_periodic.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 440--444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--444
+
+ []
+
+[11 <./800_0V_periodic.png> <./800_0V_periodic_linear.png> <./800_0V_open.png> 
+<./800_Linear_0V_open.png>]
+<1000_100dx_03damp_1V_open.png, id=240, 642.4pt x 481.8pt>
+File: 1000_100dx_03damp_1V_open.png Graphic file (type png)
+<use 1000_100dx_03damp_1V_open.png>
+Package pdftex.def Info: 1000_100dx_03damp_1V_open.png  used on input line 449.
+
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+<1000_100dx_03damp_1V_periodic.png, id=241, 642.4pt x 481.8pt>
+File: 1000_100dx_03damp_1V_periodic.png Graphic file (type png)
+<use 1000_100dx_03damp_1V_periodic.png>
+Package pdftex.def Info: 1000_100dx_03damp_1V_periodic.png  used on input line 
+456.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 447--461
+[]$[]$ $[]$ 
+ []
+
+<SC_8000_100dx_03damp_1V_periodic.png, id=242, 825.0825pt x 901.3675pt>
+File: SC_8000_100dx_03damp_1V_periodic.png Graphic file (type png)
+<use SC_8000_100dx_03damp_1V_periodic.png>
+Package pdftex.def Info: SC_8000_100dx_03damp_1V_periodic.png  used on input li
+ne 470.
+(pdftex.def)             Requested size: 121.56439pt x 132.79237pt.
+
+LaTeX Warning: Reference `giant' on page 12 undefined on input line 478.
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 478--479
+\T1/ptm/m/n/10.95 e-trates at edges, mak-ing or-der pa-ram-e-ter van-ish
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 478--479
+\T1/ptm/m/n/10.95 of the sam-ple wher-ever is also far away from
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 478--479
+\T1/ptm/m/n/10.95 the vor-tex. The same thing hap-pens for gi-ant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
+
+ []
+
+<1000_100dx_03damp_3V_open.png, id=248, 642.4pt x 481.8pt>
+File: 1000_100dx_03damp_3V_open.png Graphic file (type png)
+<use 1000_100dx_03damp_3V_open.png>
+Package pdftex.def Info: 1000_100dx_03damp_3V_open.png  used on input line 492.
+
+(pdftex.def)             Requested size: 205.6861pt x 154.26001pt.
+<8000_100dx_03damp_3V_periodic.png, id=249, 642.4pt x 481.8pt>
+File: 8000_100dx_03damp_3V_periodic.png Graphic file (type png)
+<use 8000_100dx_03damp_3V_periodic.png>
+Package pdftex.def Info: 8000_100dx_03damp_3V_periodic.png  used on input line 
+499.
+(pdftex.def)             Requested size: 196.93166pt x 147.69498pt.
+
+Underfull \hbox (badness 3965) in paragraph at lines 500--500
+[]\T1/ptm/m/n/10 (b) |The su-per-cur-rent re-sults un-der pe-ri-odic
+ []
+
+<SC_1000_100dx_03damp_3V_open.png, id=250, 876.27374pt x 917.4275pt>
+File: SC_1000_100dx_03damp_3V_open.png Graphic file (type png)
+<use SC_1000_100dx_03damp_3V_open.png>
+Package pdftex.def Info: SC_1000_100dx_03damp_3V_open.png  used on input line 5
+12.
+(pdftex.def)             Requested size: 218.81442pt x 229.09033pt.
+<SC_8000_100dx_03damp_3V_periodic.png, id=251, 913.4125pt x 899.36pt>
+File: SC_8000_100dx_03damp_3V_periodic.png Graphic file (type png)
+<use SC_8000_100dx_03damp_3V_periodic.png>
+Package pdftex.def Info: SC_8000_100dx_03damp_3V_periodic.png  used on input li
+ne 519.
+(pdftex.def)             Requested size: 218.81442pt x 215.43912pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 510--524
+[]$[]$ $[]$ 
+ []
+
+[12 <./1000_100dx_03damp_1V_open.png> <./1000_100dx_03damp_1V_periodic.png> <./
+SC_8000_100dx_03damp_1V_periodic.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
+
+ []
+
+[13 <./1000_100dx_03damp_3V_open.png> <./8000_100dx_03damp_3V_periodic.png> <./
+SC_1000_100dx_03damp_3V_open.png> <./SC_8000_100dx_03damp_3V_periodic.png>]
+<8000_100dx_03damp_1V_periodic_linear.png, id=269, 642.4pt x 481.8pt>
+File: 8000_100dx_03damp_1V_periodic_linear.png Graphic file (type png)
+<use 8000_100dx_03damp_1V_periodic_linear.png>
+Package pdftex.def Info: 8000_100dx_03damp_1V_periodic_linear.png  used on inpu
+t line 535.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+<8000_100dx_03damp_1V_periodic.png, id=270, 642.4pt x 481.8pt>
+File: 8000_100dx_03damp_1V_periodic.png Graphic file (type png)
+<use 8000_100dx_03damp_1V_periodic.png>
+Package pdftex.def Info: 8000_100dx_03damp_1V_periodic.png  used on input line 
+542.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 533--547
+[]$[]$ $[]$ 
+ []
+
+<1000_5dx_03damp_1V_open_linear.png, id=271, 642.4pt x 481.8pt>
+File: 1000_5dx_03damp_1V_open_linear.png Graphic file (type png)
+<use 1000_5dx_03damp_1V_open_linear.png>
+Package pdftex.def Info: 1000_5dx_03damp_1V_open_linear.png  used on input line
+ 554.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+<1000_5dx_03damp_1V_open.png, id=272, 642.4pt x 481.8pt>
+File: 1000_5dx_03damp_1V_open.png Graphic file (type png)
+<use 1000_5dx_03damp_1V_open.png>
+Package pdftex.def Info: 1000_5dx_03damp_1V_open.png  used on input line 561.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 552--566
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+[14 <./8000_100dx_03damp_1V_periodic_linear.png> <./8000_100dx_03damp_1V_period
+ic.png> <./1000_5dx_03damp_1V_open_linear.png> <./1000_5dx_03damp_1V_open.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+<3000_100dx_03damp_2V_open.png, id=289, 642.4pt x 481.8pt>
+File: 3000_100dx_03damp_2V_open.png Graphic file (type png)
+<use 3000_100dx_03damp_2V_open.png>
+Package pdftex.def Info: 3000_100dx_03damp_2V_open.png  used on input line 583.
+
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+<SC_3000_100dx_2V_open.png, id=290, 711.65875pt x 729.72626pt>
+File: SC_3000_100dx_2V_open.png Graphic file (type png)
+<use SC_3000_100dx_2V_open.png>
+Package pdftex.def Info: SC_3000_100dx_2V_open.png  used on input line 590.
+(pdftex.def)             Requested size: 175.04887pt x 179.49155pt.
+<1000_100dx_03damp_3V_open_random.png, id=291, 429.605pt x 361.35pt>
+File: 1000_100dx_03damp_3V_open_random.png Graphic file (type png)
+<use 1000_100dx_03damp_3V_open_random.png>
+Package pdftex.def Info: 1000_100dx_03damp_3V_open_random.png  used on input li
+ne 602.
+(pdftex.def)             Requested size: 218.81442pt x 184.04897pt.
+<4000_100dx_03damp_3V_open_random.png, id=292, 432.61626pt x 370.38374pt>
+File: 4000_100dx_03damp_3V_open_random.png Graphic file (type png)
+<use 4000_100dx_03damp_3V_open_random.png>
+Package pdftex.def Info: 4000_100dx_03damp_3V_open_random.png  used on input li
+ne 609.
+(pdftex.def)             Requested size: 218.81442pt x 187.339pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 600--614
+[]$[]$ $[]$ 
+ []
+
+<SC_4000_100dx_03damp_3V_open_random.png, id=293, 777.90625pt x 735.74875pt>
+File: SC_4000_100dx_03damp_3V_open_random.png Graphic file (type png)
+<use SC_4000_100dx_03damp_3V_open_random.png>
+Package pdftex.def Info: SC_4000_100dx_03damp_3V_open_random.png  used on input
+ line 620.
+(pdftex.def)             Requested size: 218.81442pt x 206.95128pt.
+<3V_03damp_random_init.png, id=294, 642.4pt x 481.8pt>
+File: 3V_03damp_random_init.png Graphic file (type png)
+<use 3V_03damp_random_init.png>
+Package pdftex.def Info: 3V_03damp_random_init.png  used on input line 627.
+(pdftex.def)             Requested size: 218.81442pt x 164.11124pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 618--632
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
+
+ []
+
+[15 <./3000_100dx_03damp_2V_open.png> <./SC_3000_100dx_2V_open.png>] [16 <./100
+0_100dx_03damp_3V_open_random.png> <./4000_100dx_03damp_3V_open_random.png> <./
+SC_4000_100dx_03damp_3V_open_random.png> <./3V_03damp_random_init.png>]
+<2V_init.png, id=316, 405.515pt x 352.31625pt>
+File: 2V_init.png Graphic file (type png)
+<use 2V_init.png>
+Package pdftex.def Info: 2V_init.png  used on input line 648.
+(pdftex.def)             Requested size: 218.81442pt x 190.11354pt.
+<2V_800_100dx_diagnal_06damp.png, id=317, 396.48125pt x 343.2825pt>
+File: 2V_800_100dx_diagnal_06damp.png Graphic file (type png)
+<use 2V_800_100dx_diagnal_06damp.png>
+Package pdftex.def Info: 2V_800_100dx_diagnal_06damp.png  used on input line 65
+5.
+(pdftex.def)             Requested size: 218.81442pt x 189.45546pt.
+<2V_1500_100dx_diagnal_06damp.png, id=318, 395.4775pt x 346.29375pt>
+File: 2V_1500_100dx_diagnal_06damp.png Graphic file (type png)
+<use 2V_1500_100dx_diagnal_06damp.png>
+Package pdftex.def Info: 2V_1500_100dx_diagnal_06damp.png  used on input line 6
+62.
+(pdftex.def)             Requested size: 218.81442pt x 191.60349pt.
+<2V_1500_100dx_diagnal_06damp_SC.png, id=319, 474.77374pt x 445.665pt>
+File: 2V_1500_100dx_diagnal_06damp_SC.png Graphic file (type png)
+<use 2V_1500_100dx_diagnal_06damp_SC.png>
+Package pdftex.def Info: 2V_1500_100dx_diagnal_06damp_SC.png  used on input lin
+e 669.
+(pdftex.def)             Requested size: 218.81442pt x 205.396pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 646--674
+[]$[]$ $[]$
+ []
+
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 646--674
+[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 679--680
+
+ []
+
+[17 <./2V_init.png> <./2V_800_100dx_diagnal_06damp.png> <./2V_1500_100dx_diagna
+l_06damp.png> <./2V_1500_100dx_diagnal_06damp_SC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 684--686
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
+[]\T1/ptm/m/it/10.95 Landau the-ory of sec-ond or-der phase tran-si-tions\T1/pt
+m/m/n/10.95 . On-line ma-te-rial: http://lamp.tu-
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
+ (./ReportTemplate.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 708.
+Package rerunfilecheck Info: File `ReportTemplate.out' has not changed.
+(rerunfilecheck)             Checksum: DE406F5987D27D254E9646C4524CFBCA;1657.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 708.
+ ) 
+Here is how much of TeX's memory you used:
+ 8866 strings out of 492616
+ 133720 string characters out of 6132769
+ 248607 words of memory out of 5000000
+ 12529 multiletter control sequences out of 15000+600000
+ 42537 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,10n,43p,977b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb
+8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive
+/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ReportTemplate.pdf (19 pages, 1835610 bytes).
+PDF statistics:
+ 408 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+
