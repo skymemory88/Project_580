@@ -48,13 +48,13 @@ template<class T>                                    //Determine the minimum num
 inline T min(T x, T y){return (x>y?y:x);}
 
 template<class T>
-inline int index(T i, T j) { return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
-/*{
+inline int index(T i, T j) //{ return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
+{
    if(i >= N or i < 0 or j >= N or j < 0)
     return (N2);
  else
      return i + j*N;                                 //Alternative boundary condition, hard open boundary condition
-}*/
+}
 
 void ermessage()
 {
