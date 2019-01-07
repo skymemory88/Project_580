@@ -4,14 +4,12 @@
 #include <typeinfo>
 #include <cstdlib>
 #include <cassert>
+#include <cstddef>
 
 #include "vec2.hpp"
 
 #include <string>
 using std::string;
-
-#include <cstddef>
-using std::size_t;
 
 #include <complex>
 using std::complex;
@@ -44,7 +42,7 @@ private:
     template<class T>
     inline int ypos(T i) { return i / N; }        //Extract position on y-axis from index
     template<class T>
-    inline size_t index(T i, T j) { return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
+    inline int index(T i, T j) { return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
     /*{
      if(i >= N or i < 0 or j >= N or j < 0)
      return (N2);
@@ -53,28 +51,28 @@ private:
      }*/
 
 public:
-    size_t N;
-    size_t N2;
+    int N;
+    int N2;
     double dx;
     double dy;
     vector<Type> data;
 public:
     field() : N(0), N2(0), dx(0), dy(0), data() {}
-    field(double L, size_t N_) : N(N_), N2(N_*N_), dx(L/N_), dy(L/N_), data(N_*N_+1){}		//Create a discrete field of (N^2) cells of size (L/N_) with one additional dummy cell for boundary conditions.
+    field(double L, int N_) : N(N_), N2(N_*N_), dx(L/N_), dy(L/N_), data(N_*N_+1){}		//Create a discrete field of (N^2) cells of size (L/N_) with one additional dummy cell for boundary conditions.
     
-    Type& operator[](size_t i)
+    Type& operator[](int i)
     {
         return data[i];
     }
     
-    const Type& operator[](size_t i) const
+    const Type& operator[](int i) const
     {
         return data[i];
     }
 
     field<Type>& operator=(const field<Type> &B)
     {
-        for (size_t i = 0; i < B.data.size(); ++i)
+        for (int i = 0; i < B.data.size(); ++i)
         {
             data[i] = B.data[i];
         }
@@ -120,11 +118,11 @@ public:
             cerr << "ERROR: Can't open the file" << endl;
             exit(1);
         }
-        size_t i = 0;
+        int i = 0;
         while (true)
         {
-            size_t x;
-            size_t y;
+            int x;
+            int y;
             Type tamp;
             fin >> x >> y >> tamp;
             data[index(x,y)] = tamp;

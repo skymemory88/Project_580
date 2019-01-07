@@ -5,8 +5,6 @@
 #include <cstdlib>
 
 #include <cstddef>
-using std::size_t;
-
 #include <vector>
 using std::vector;
 
@@ -33,8 +31,8 @@ using std::sin;
 
 mtrand Rand(time(0));
 double damp = 1.0;                //choose damping factor for cell update
-size_t N = 500;                   //choose discretizing size (see "field.h").
-size_t N2 = N*N;
+int N = 500;                   //choose discretizing size (see "field.h").
+int N2 = N*N;
 complex<double> ci(0.0,1.0);      //create mathematical imaginary number "i"
 
 template<class T>
@@ -50,7 +48,7 @@ template<class T>                                    //Determine the minimum num
 inline T min(T x, T y){return (x>y?y:x);}
 
 template<class T>
-inline size_t index(T i, T j) { return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
+inline int index(T i, T j) { return ((i + N) % N) + ((j + N) % N)*N; }       //Periodic boundary condition for cell update
 /*{
    if(i >= N or i < 0 or j >= N or j < 0)
     return (N2);
@@ -80,7 +78,7 @@ void Decompose_wavefunc(field< complex<double> >& wavefunc, field<double>& ProbD
 {
     for (int i = 0; i < N2; ++i)
     {
-        ProbDen[i] = abs(wavefunc[i]);
+        ProbDen[i] = abs(wavefunc[i]) * abs(wavefunc[i]);
         Phase[i] = arg(wavefunc[i]);
     }
 }
@@ -105,7 +103,7 @@ void Import_Data(field<vec2> &vecP, field<complex<double> >& wavefunc, field<vec
     Phase.import_map("Initial_Phase");
 }
 
-void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec2> &supC, field<double> &ProbDen, field<double> &Phase, const size_t &vnum, const double &xsi)        //sample initializaiton: discretizing, fill initial values
+void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec2> &supC, field<double> &ProbDen, field<double> &Phase, const int &vnum, const double &xsi)        //sample initializaiton: discretizing, fill initial values
 {    
     const double dx = wavefunc.dx;
     const double dy = wavefunc.dy;
@@ -115,14 +113,15 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
     
         //wavefunc[i] = (2*Rand()-1,2*Rand()-1)*(1./sqrt(2.));     //Alternative wave of set up the system with random fluctuation of phase and amplitude
     
-        //const size_t vnum = rand()%10;            //Alternative way of generate random number of vortices to be placed in
+        //const int vnum = rand()%10;            //Alternative way of generate random number of vortices to be placed in
 
 	vector<int> vindex(vnum);                   //create an arry of size in accordance with the number of vortices to store their positions
     
-    for (size_t i = 0; i < vindex.size(); ++i)
+    for (int i = 0; i < vindex.size(); ++i)
     {
-        //vindex[i] = N2/2+N/2- 29 + 48*i;                   //Put the vortex (vortices) in the center, multiple vortices overlap here physically means giant vortex state
-        vindex[i] = Rand(N) + Rand(N)*N;				     //Alternative way of putting vortices in with random postion generated
+        vindex[i] = static_cast<int>( (N-1)*(N-1) / vnum) * (i + 1) + 1;    //evenly place all the vortices
+        //vindex[i] = N2/2 + N/2- 29 + 48*i;                   //Put the vortex (vortices) in the center, multiple vortices overlap here physically means giant vortex state
+        //vindex[i] = Rand(N) + Rand(N)*N;				     //Alternative way of putting vortices in with random postion generated
 		cout << "Vortex generated at " << "(" << xpos(vindex[i]) << ", " << ypos(vindex[i]) << ")" << "\t" << endl;              //check point
     }
 
@@ -131,7 +130,7 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
 	else
 		cout << vnum << " vortices generated." << endl;      //check point
     
-    for (size_t i = 0; i < vindex.size(); ++i)
+    for (int i = 0; i < vindex.size(); ++i)
     {
         vecP[vindex[i]] = vec2();
         wavefunc[vindex[i]] = complex<double>(0.0,0.0);      //Vanish wavefunction and vector potential at the enter of a vortex to be physical sensible
@@ -140,22 +139,22 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
     for (int i = 0; i < N2; ++i)
     {
         
-        for (size_t j = 0; j < vindex.size(); ++j)
+        for (int j = 0; j < vindex.size(); ++j)
             if (i != vindex[j])
             {
                 const double halfL = N*dx/2;
                 const double L = 2*halfL;
-                double x = (xpos(i)-xpos(vindex[j])) * dx;
-                double y = (ypos(i)-ypos(vindex[j])) * dy;        //Compute relative distance between a vortex and the current cell
+                double x = ( xpos(i)-xpos(vindex[j]) ) * dx;
+                double y = ( ypos(i)-ypos(vindex[j]) ) * dy;        //Compute relative distance between a vortex and the current cell
                 
                 if (x > halfL)
                     x -= L;
-                if (x <= -halfL)
+                else
                     x += L;
                 
                 if (y > halfL)
                     y -= L;
-                if (y <= -halfL)
+                else
                     y += L;         //Apply truncated rule to only take into account the influence from the most nearby vortex under periodic condition.
                 
                 double r2 = x*x + y*y;
@@ -171,30 +170,30 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
 
 	for (int i = 0; i < N2; ++i)
 	{
-		for (size_t j = 0; j < vindex.size(); ++j)
+		for (int j = 0; j < vindex.size(); ++j)
 			if (i != vindex[j])
 			{
 				const double halfL = N*dx / 2;
 				const double L = 2 * halfL;
-				double x = (xpos(i) - xpos(vindex[j])) * dx;
-				double y = (ypos(i) - ypos(vindex[j])) * dy;
+				double x = ( xpos(i) - xpos( vindex[j] ) ) * dx;
+				double y = ( ypos(i) - ypos( vindex[j] ) ) * dy;
 
 				//double xx = (fabs(xpos(i)-xpos(vindex[j])) - N) * dx;
 				//double yy = (fabs(ypos(i)-ypos(vindex[j])) - N) * dy;
 
 				if (x > halfL)
 					x -= L;
-				if (x <= -halfL)
+				else
 					x += L;
              
 				if (y > halfL)
 					y -= L;
-				if (y <= -halfL)
+				else
 					y += L;         //Apply truncated rule to only take into account the influence from the most nearby vortex under periodic condition.
 
 				const double r = sqrt(x*x + y*y);
 				double theta0 = atan2(y, x);            //determine the phase angle of the local wavefunction
-				double phase = vnum*theta0;            //put in information about the number of total vortices
+				double phase = vnum * theta0;            //put in information about the number of total vortices
 				complex<double> LocalPh(cos(phase), sin(phase));   //determine the phase of the local wavefunction
 				complex<double> psiLocal = tanh(r / xsi)*LocalPh;       //Determine the amplitude of local wavefunction
 				wavefunc[i] *= psiLocal;                        //take into account all vortices within the cut-off range
@@ -218,12 +217,12 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
     Phase.map_data("Initial_Phase");
 }
 
-void linear_update_data(field<vec2>& vecP, field< complex<double> >& wavefunc, field<vec2> &supC, const size_t& rev, const double &xsi)       //updating function using linear GL equations
+void linear_update_data(field<vec2>& vecP, field< complex<double> >& wavefunc, field<vec2> &supC, const int& rev, const double &xsi)       //updating function using linear GL equations
 {
     const double dx = wavefunc.dx;
     const double dy = wavefunc.dy;
     const double alpha = -0.25/xsi/xsi;     //GL expansion coefficient (determins temperature in our case)
-    for (size_t time = 0; time < rev; ++time)
+    for (int time = 0; time < rev; ++time)
     {
     for (int i = 0; i < N2; ++i)
     {
@@ -335,13 +334,13 @@ void linear_update_data(field<vec2>& vecP, field< complex<double> >& wavefunc, f
     }
 }
 
-void update_data(field<vec2>& vecP, field< complex<double> >& wavefunc, field<vec2> &supC, const size_t& rev, const double &xsi)
+void update_data(field<vec2>& vecP, field< complex<double> >& wavefunc, field<vec2> &supC, const int& rev, const double &xsi)
 {
     const double dx = wavefunc.dx;
     const double dy = wavefunc.dy;
     const double alpha = -0.25/xsi/xsi;
 
-    for (size_t time = 0; time < rev; ++time)
+    for (int time = 0; time < rev; ++time)
     {
     for (int i = 0; i < N2; ++i)
     {
@@ -564,7 +563,7 @@ int main(int argc, char *argv[])
     
     const double L = atof(argv[1]);     //take the first argument input as the size of sample.
     const double rev = atof(argv[2]);   //take the second argument input as the count of relaxation time.
-	const size_t vnum = atof(argv[3]);  //take the third argument input as vortex number.
+	const int vnum = atof(argv[3]);  //take the third argument input as vortex number.
     
     if (L <= 0) ermessage2();
 	if (vnum <= 0) ermessage3();
