@@ -107,17 +107,18 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
 {    
     const double dx = wavefunc.dx;
     const double dy = wavefunc.dy;
-   
-    for (int i = 0; i < N2; ++i)
-        wavefunc[i] = complex<double>(1.0,0.0);       //Make the amplitude of wavefunction throughout the system to unity for convenience of multiplication later
-    
-        //wavefunc[i] = (2*Rand()-1,2*Rand()-1)*(1./sqrt(2.));     //Alternative wave of set up the system with random fluctuation of phase and amplitude
-    
-        //const int vnum = rand()%10;            //Alternative way of generate random number of vortices to be placed in
 
-	vector<int> vindex(vnum);                   //create an arry of size in accordance with the number of vortices to store their positions
+    for (int i = 0; i < N2; ++i)
+    {
+        wavefunc[i] = complex<double>(1.0, 0.0); //Make the amplitude of wavefunction throughout the system to unity for convenience of multiplication later
+        //wavefunc[i] = (2*Rand()-1,2*Rand()-1)*(1./sqrt(2.));     //Alternative wave of set up the system with random fluctuation of phase and amplitude
+
+        //const int vnum = rand()%10;            //Alternative way of generate random number of vortices to be placed in
+    }
+
+    vector<int> vindex(vnum);                   //create an arry of size in accordance with the number of vortices to store their positions
     
-    for (int i = 0; i < vindex.size(); ++i)
+    for (size_t i = 0; i < vindex.size(); ++i)
     {
         vindex[i] = static_cast<int>( (N-1)*(N-1) / vnum) * (i + 1) + 1;    //evenly place all the vortices
         //vindex[i] = N2/2 + N/2- 29 + 48*i;                   //Put the vortex (vortices) in the center, multiple vortices overlap here physically means giant vortex state
@@ -130,7 +131,7 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
 	else
 		cout << vnum << " vortices generated." << endl;      //check point
     
-    for (int i = 0; i < vindex.size(); ++i)
+    for (size_t i = 0; i < vindex.size(); ++i)
     {
         vecP[vindex[i]] = vec2();
         wavefunc[vindex[i]] = complex<double>(0.0,0.0);      //Vanish wavefunction and vector potential at the enter of a vortex to be physical sensible
@@ -139,7 +140,7 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
     for (int i = 0; i < N2; ++i)
     {
         
-        for (int j = 0; j < vindex.size(); ++j)
+        for (size_t j = 0; j < vindex.size(); ++j)
             if (i != vindex[j])
             {
                 const double halfL = N*dx/2;
@@ -170,7 +171,7 @@ void initia_data(field<vec2> &vecP, field<complex<double> > &wavefunc, field<vec
 
 	for (int i = 0; i < N2; ++i)
 	{
-		for (int j = 0; j < vindex.size(); ++j)
+		for (size_t j = 0; j < vindex.size(); ++j)
 			if (i != vindex[j])
 			{
 				const double halfL = N*dx / 2;
